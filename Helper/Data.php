@@ -324,6 +324,7 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
     {
         $response = [];
         $response['apikey'] = $this->scopeConfig->getValue('textlocalsms/general/api_key', \Magento\Store\Model\ScopeInterface::SCOPE_STORE);
+        $response['sender_id'] = $this->scopeConfig->getValue('textlocalsms/general/sender_id', \Magento\Store\Model\ScopeInterface::SCOPE_STORE);
         return $response;
     }
 
@@ -344,7 +345,7 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
     {
         $textLocalDetails = $this->getTextLocalDetails();
         $apiKey = urlencode($textLocalDetails['apikey']);
-        $sender = urlencode('TXTLCL');
+        $sender = urlencode($textLocalDetails['sender_id']);
         $data = array('apikey' => $apiKey, 'numbers' => $smsto, 'sender' => $sender, 'message' => $message);
         $ch = curl_init('https://api.textlocal.in/send/');
         curl_setopt($ch, CURLOPT_POST, true);

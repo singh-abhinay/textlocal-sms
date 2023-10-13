@@ -20,6 +20,11 @@
                     <label>API Key</label>
                     <comment>TextLocal user API key.</comment>
                 </field>
+                <field id="sender_id" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="0"
+                       showInStore="0">
+                    <label>Sender ID</label>
+                    <comment>TextLocal user Sender ID.</comment>
+                </field>
                 <field id="dynamic_fields" translate="label" type="label" sortOrder="20" showInDefault="1"
                        showInWebsite="0" showInStore="0">
                     <label>Dynamic Messages Text</label>

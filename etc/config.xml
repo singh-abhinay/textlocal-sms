@@ -7,6 +7,7 @@
             <general>
                 <enable>1</enable>
                 <api_key>xx45-xx56-78</api_key>
+                <sender_id>TXTLCL</sender_id>
             </general>
             <registration>
                 <enable>1</enable>
