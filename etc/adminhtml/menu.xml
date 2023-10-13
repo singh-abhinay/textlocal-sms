@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Abhinay_TextLocal::textlocal" title="Sms Integration"
+             translate="title" module="Abhinay_TextLocal"
+             parent="Abhinay_Core::Abhinay" sortOrder="10"
+             resource="Abhinay_TextLocal::textlocal"/>
+
+        <add id="Abhinay_TextLocal::config"
+             title="Configurations" module="Abhinay_TextLocal"
+             sortOrder="20" parent="Abhinay_TextLocal::textlocal"
+             action="adminhtml/system_config/edit/section/textlocalsms"
+             resource="Abhinay_TextLocal::config"/>
+    </menu>
+</config>
